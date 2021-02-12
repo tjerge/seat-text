@@ -4,6 +4,12 @@
 @section('page_header', trans('text::text.text'))
 @section('page_description', trans('text::text.instructions'))
 
+@push('head')
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "https://snoopy.crypta.tech/snoopy/seat-text-instructions.css" />
+@endpush
+
 @section('full')
 
 <!-- Instructions -->
@@ -50,6 +56,9 @@
           <p>There is no sanitisation on anything you place into a text, so long as it is ascii.</p>
           <p>This means you could host anything here, including anything from a custom staic webpage, to phishing sites, to malware. This is your (the installer) responsibility to manage!<p>
         </div>
+      </div>
+      <div class="card-footer text-muted">
+        Plugin maintained by <a href="{{ route('text.about') }}"> {!! img('characters', 'portrait', 96057938, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Crypta Electrica</a>. <span class="float-right snoopy" style="color: #fa3333;"><i class="fas fa-signal"></i></span>
       </div>
     </div>
   </div>

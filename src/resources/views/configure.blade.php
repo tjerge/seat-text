@@ -3,8 +3,13 @@
 @section('title', trans('text::text.configure'))
 @section('page_header', trans('text::text.configure'))
 
-@section('full')
+@push('head')
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "https://snoopy.crypta.tech/snoopy/seat-text-configure.css" />
+@endpush
 
+@section('full')
 
 @if($pages->isEmpty())
 
@@ -50,7 +55,7 @@
                     <td class="no-hover pull-right" style="min-width: 80px;">
                         <a type="button" id="viewtext" class="btn btn-xs btn-success" data-id="{{ $page['id'] }}" data-toggle="tooltip" data-placement="top" title="View Fitting" href="{{ $page->link }}">
                             <span class="fa fa-eye text-white"></span>
-</a>
+                        </a>
                         <button type="button" id="edittext" class="btn btn-xs btn-warning" data-id="{{ $page['id'] }}" data-toggle="tooltip" data-placement="top" title="Edit Text">
                             <span class="fas fa-edit text-white"></span>
                         </button>
@@ -62,6 +67,9 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    <div class="card-footer text-muted">
+        Plugin maintained by <a href="{{ route('text.about') }}"> {!! img('characters', 'portrait', 96057938, 64, ['class' => 'img-circle eve-icon small-icon']) !!} Crypta Electrica</a>. <span class="float-right snoopy" style="color: #fa3333;"><i class="fas fa-signal"></i></span>
     </div>
 </div>
 
