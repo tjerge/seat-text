@@ -53,7 +53,7 @@
                     <td>{{ $page->url }}</td>
                     <td>{{ substr(preg_replace( "/\r|\n/", "", $page->text), 0, 60) }}</td>
                     <td class="no-hover pull-right" style="min-width: 80px;">
-                        <a type="button" id="viewtext" class="btn btn-xs btn-success" data-id="{{ $page['id'] }}" data-toggle="tooltip" data-placement="top" title="View Fitting" href="{{ $page->link }}">
+                        <a type="button" id="viewtext" class="btn btn-xs btn-success" data-id="{{ $page['id'] }}" data-toggle="tooltip" data-placement="top" title="View Text" href="{{ $page->link }}">
                             <span class="fa fa-eye text-white"></span>
                         </a>
                         <button type="button" id="edittext" class="btn btn-xs btn-warning" data-id="{{ $page['id'] }}" data-toggle="tooltip" data-placement="top" title="Edit Text">
